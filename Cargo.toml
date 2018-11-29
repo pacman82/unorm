@@ -1,0 +1,8 @@
+[package]
+name = "unorm"
+version = "0.1.0"
+authors = ["Markus Klein <markus-klein@live.de>"]
+description = "An unsigned normalized number type, able to represent numbers ranging from 0 to 1."
+license = "MIT"
+
+[dependencies]

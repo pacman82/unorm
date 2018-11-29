@@ -36,6 +36,18 @@ impl From<Unorm> for f32 {
     }
 }
 
+impl From<f64> for Unorm {
+    fn from(source: f64) -> Unorm {
+        Unorm((source * std::u32::MAX as f64) as u32)
+    }
+}
+
+impl From<f32> for Unorm {
+    fn from(source: f32) -> Unorm {
+        Unorm((source * std::u32::MAX as f32) as u32)
+    }
+}
+
 impl fmt::Display for Unorm {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let out : f64 = (*self).into();
